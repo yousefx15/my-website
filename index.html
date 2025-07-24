@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>يوسف حيدري - AhwazeSoft</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #1e1e1e;
+      color: gold;
+      text-align: center;
+    }
+
+    header {
+      background-color: #2b2b2b;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo span {
+      font-size: 18px;
+      font-weight: bold;
+      color: gold;
+    }
+
+    .menu-btn {
+      font-size: 28px;
+      cursor: pointer;
+      color: gold;
+      background: none;
+      border: none;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -270px;
+      width: 250px;
+      height: 100%;
+      background-color: #2b2b2b;
+      color: gold;
+      padding: 20px;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+      transition: right 0.3s ease;
+      z-index: 1000;
+    }
+
+    .sidebar.open {
+      right: 0;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 999;
+    }
+
+    .overlay.show {
+      display: block;
+    }
+
+    .sidebar h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar a {
+      color: gold;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .back-btn {
+      background-color: gold;
+      color: black;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    main {
+      padding: 30px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <button class="back-btn" onclick="history.back()">رجوع</button>
+    <div class="logo">
+      <span>يوسف حيدري</span>
+    </div>
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+  </header>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <div id="sidebar" class="sidebar">
+    <h3>معلوماتي</h3>
+    <a href="https://www.instagram.com/yousef110g?igsh=MTQ4dTk0YXhraGhiaw==" target="_blank">انستغرامي 📷</a>
+    <p>يوسف حيدري</p>
+  </div>
+
+  <main>
+    <h1>أهواز سوفت - يوسف حيدري</h1>
+    <p>برامج وألعاب عربية بدون إنترنت وبشكل مجاني!</p>
+    <p>مرحباً بك في الموقع الرسمي لـ يوسف حيدري 👑</p>
+    <p>تجد آخر البرامج، الألعاب، والشروحات بدون إنترنت وبدون إعلانات.</p>
+  </main>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.add("open");
+      document.getElementById("overlay").classList.add("show");
+    }
+
+    function closeSidebar() {
+      document.getElementById("sidebar").classList.remove("open");
+      document.getElementById("overlay").classList.remove("show");
+    }
+  </script>
+
+</body>
+</html>
+<img src="yousef.jpg" alt="صورة يوسف" width="250">
